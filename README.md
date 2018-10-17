@@ -67,7 +67,7 @@ Exemple: ``/scoreboard delete Miste`` will remove the scoreboard.
 It gives you the list of available commands and how to use them.
 
 ### API
-```
+```php
 use Miste\scoreboardspe\API\{
 	Scoreboard, ScoreboardDisplaySlot, ScoreboardSort, ScoreboardAction
 };
@@ -77,7 +77,7 @@ use Miste\scoreboardspe\API\{
     The id is created and saved linked with the display name internally
 */    
 
-$scoreboard = new Scoreboard($this->getServer()->getPluginManager()->getPlugin("ScoreboardsPE)->getPlugin(), "Miste", ScoreboardAction::CREATE);
+$scoreboard = new Scoreboard($this->getServer()->getPluginManager()->getPlugin("ScoreboardsPE")->getPlugin(), "Miste", ScoreboardAction::CREATE);
 $scoreboard->create(ScoreboardDisplaySlot::SIDEBAR, ScoreboardSort::DESCENDING);
 
 /*
@@ -85,7 +85,7 @@ $scoreboard->create(ScoreboardDisplaySlot::SIDEBAR, ScoreboardSort::DESCENDING);
     Here you will get back the instance of the scoreboard we created above
 */
 
-$scoreboard = new Scoreboard($this->getServer()->getPluginManager()->getPlugin("ScoreboardsPE)->getPlugin(), "Miste", ScoreboardAction::MODIFY);
+$scoreboard = new Scoreboard($this->getServer()->getPluginManager()->getPlugin("ScoreboardsPE")->getPlugin(), "Miste", ScoreboardAction::MODIFY);
 
 /*
     Send the scoreboard to the player (without any lines)
